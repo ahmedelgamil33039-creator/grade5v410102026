@@ -736,15 +736,15 @@ form-title">إضافة سؤال جديد يدوياً</h4>
 <img src="https://i.postimg.cc/mZMMgXM8/Honor-roll-board-design-2K-20261010204000.jpg">
 
         <!-- المركز الأول (في النص) -->
-        <div id="honor-name-1" class="absolute w-[24%] text-center text-white font-bold drop-shadow-md text-[2.2vw] sm:text-sm md:text-base" style="top: 68.5%; left: 50%; transform: translate(-50%, -50%);">
+        <div id="honor-name-1" class="absolute w-[24%] text-center text-white font-bold drop-shadow-md text-[2.2vw] sm:text-sm md:text-base" style="top: 71.5%; left: 50%; transform: translate(-50%, -50%);">
         </div>
 
         <!-- المركز الثاني (يمين الصورة) -->
-        <div id="honor-name-2" class="absolute w-[24%] text-center text-white font-bold drop-shadow-md text-[2.0vw] sm:text-xs md:text-sm" style="top: 71.5%; left: 18.5%; transform: translate(-50%, -50%);">
+        <div id="honor-name-2" class="absolute w-[24%] text-center text-white font-bold drop-shadow-md text-[2.0vw] sm:text-xs md:text-sm" style="top: 84.5%; left: 18.5%; transform: translate(-50%, -50%);">
         </div>
 
         <!-- المركز الثالث (يسار الصورة) -->
-        <div id="honor-name-3" class="absolute w-[24%] text-center text-white font-bold drop-shadow-md text-[2.0vw] sm:text-xs md:text-sm" style="top: 71.5%; left: 81.5%; transform: translate(-50%, -50%);">
+        <div id="honor-name-3" class="absolute w-[24%] text-center text-white font-bold drop-shadow-md text-[2.0vw] sm:text-xs md:text-sm" style="top: 84.5%; left: 81.5%; transform: translate(-50%, -50%);">
         </div>
     </div>
 </div>
@@ -2111,11 +2111,11 @@ function downloadHonorBoard() {
         }
 
         // المركز الأول (لو قصير يظهر سطر واحد بحجم 26، لو طويل يتقسم لسطرين بذكاء)
-        drawSmartText(name1, w * 0.50, h * 0.75, 400, 26);
+        drawSmartText(name1, w * 0.50, h * 0.72, 400, 26);
 
         // المركز الثاني والثالث
-        drawSmartText(name2, w * 0.185, h * 0.72, 300, 20);
-        drawSmartText(name3, w * 0.815, h * 0.72, 300, 20);
+        drawSmartText(name2, w * 0.185, h * 0.85, 300, 20);
+        drawSmartText(name3, w * 0.815, h * 0.85, 300, 20);
 
         const link = document.createElement('a');
         link.download = `لوحة_شرف_الأبطال_${name1}.jpg`;
