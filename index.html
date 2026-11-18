@@ -906,7 +906,7 @@
             lessons: { 'الوحدة الأولى': ['الدرس الأول', 'الدرس الثاني', 'الدرس الثالث'], 'الوحدة الثانية': ['الدرس الأول', 'الدرس الثاني'], 'الوحدة الثالثة': ['الدرس الأول'] }
         };
 
-        const DEFAULT_STUDENTS = [ { id: 'std_prim4b_01', name: 'أحمد محمود', passcode: '1122' }, { id: 'std_prim4b_02', name: 'سارة خالد', passcode: '3344' } ];
+        const DEFAULT_STUDENTS = [ { id: 'std_prim5b_01', name: 'أحمد محمود', passcode: '1122' }, { id: 'std_prim5b_02', name: 'سارة خالد', passcode: '3344' } ];
 
         let DB = { config: DEFAULT_CONFIG, students: DEFAULT_STUDENTS, questions: [], results: [], essaySubmissions: [] };
         let currentStudent = null; let activeAttempt = null; let timerInterval = null; let isPreviewMode = false; let isEndingQuiz = false; let viewingAsAdmin = false;
@@ -1909,7 +1909,7 @@ DB.config.honor3 = document.getElementById('admin-h3').value.trim();
             const sId = document.getElementById('admin-student-id').value; const name = document.getElementById('admin-new-student-name').value.trim(); const pass = document.getElementById('admin-new-student-pass').value.trim();
             if (!name || !pass) { showToast('يرجى كتابة اسم الطالب ورقمه السري.', 'fa-circle-exclamation', true); return; }
             if (sId) { const s = DB.students.find(x => x.id === sId); if(s) { s.name = name; s.passcode = pass; } showToast('تم تعديل بيانات الطالب.', 'fa-check'); } 
-            else { DB.students.push({ id: 'std_prim4b_' + Date.now().toString().slice(-4), name, passcode: pass }); showToast('تمت الإضافة بنجاح.', 'fa-user-check'); }
+            else { DB.students.push({ id: 'std_prim5b_' + Date.now().toString().slice(-4), name, passcode: pass }); showToast('تمت الإضافة بنجاح.', 'fa-user-check'); }
             await saveDatabase(); cancelEditStudent(); renderAdminStudents(); initApp();
         }
 
